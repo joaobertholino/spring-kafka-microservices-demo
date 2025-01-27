@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: service-producer
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:broker:9092}
+    service:
+      request:
+        topic: ${SERVICE_REQUEST_TOPIC:service.request.topic.v1}
+server:
+  port: ${server_producer_port:9090}

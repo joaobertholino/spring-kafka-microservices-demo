@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: service-consumer
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:broker:9092}
+    consumer:
+      group-id: ${KAFKA_CONSUMER_GROUP_ID:service-request-consumer-id-1}
+    service:
+      request:
+        topic: ${SERVICE_REQUEST_TOPIC:service.request.topic.v1}
+server:
+  port: ${server_consumer_port:8080}
